@@ -1,12 +1,17 @@
 body {
   background-color: #f0f7f4;
+  font-family: "Raleway", sans-serif;
+  margin-left: 5vw;
+  margin-right: 5vw;
 }
 a {
   text-decoration: none;
 }
 h1 {
   color: #246a73;
-  font-size: 10vw;
+  font-family: "Shadows Into Light", cursive;
+  font-size: 15vw;
+  margin: 0;
 }
 
 .nav {
@@ -30,7 +35,12 @@ h1 {
 }
 .flex-container {
   display: flex;
-  width: 90vmax;
-  justify-content: center;
+  /* width: 95vmax; */
+  justify-content: space-between;
+  align-items: center;
   column-gap: 5vw;
+}
+.big-name {
+  display: flex;
+  max-height: 100%;
 }
