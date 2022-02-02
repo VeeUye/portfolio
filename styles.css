@@ -1,29 +1,36 @@
 body {
   background-color: #f0f7f4;
 }
+a {
+  text-decoration: none;
+}
 h1 {
   color: #246a73;
   font-size: 10vw;
 }
 
+.nav {
+  display: flex;
+  list-style-type: none;
+  width: 100%;
+  justify-content: flex-end;
+  column-gap: 2vw;
+  font-size: 2vw;
+}
+
+.nav a {
+  display: block;
+  color: #246a73;
+}
+
 .profile-img {
-  opacity: 0.5;
+  opacity: 0.8;
   border-radius: 300px;
   width: 20vw;
 }
-.page-splash {
+.flex-container {
   display: flex;
-  flex-flow: row nowrap;
   width: 90vmax;
   justify-content: center;
-  align-content: center;
-  align-items: center;
-  /* background-color: burlywood; */
   column-gap: 5vw;
-}
-.page-splash-item1 {
-  /* font-size: 6vw; */
-  /* flex-grow: 2; */
-}
-.page-splash-item2 {
 }
