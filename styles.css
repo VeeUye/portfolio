@@ -1,0 +1,22 @@
+.page-splash {
+  display: flex;
+  flex-flow: row nowrap;
+  width: 90vmax;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  background-color: burlywood;
+  column-gap: 5vw;
+}
+.page-splash-item1 {
+  font-size: 8vw;
+  /* flex-grow: 2; */
+}
+.page-splash-item2 {
+  width: 20vw;
+  border-radius: 300px;
+}
+
+img {
+  /* max-width: 100%; */
+}
