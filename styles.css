@@ -77,13 +77,27 @@ h6 {
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
-    ". logo . main-nav ."
+    ". main-header main-header main-header ."
     ". intro intro intro ."
     ". about about about ."
     ". projects projects projects ."
     ". writing writing writing ."
     ". contact contact contact ."
     ". footer footer footer .";
+}
+
+.main-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "logo . main-nav";
+  grid-area: main-header;
+}
+
+.logo {
+  justify-self: start;
+  grid-area: logo;
 }
 
 .main-nav {
@@ -126,12 +140,6 @@ h6 {
 .credits {
   justify-self: start;
   grid-area: credits;
-}
-
-.logo {
-  justify-self: start;
-  align-self: center;
-  grid-area: logo;
 }
 
 .contact {
