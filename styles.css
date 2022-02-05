@@ -70,9 +70,15 @@ h6 {
 
 /* my css */
 
+h1 {
+  font-family: "Major Mono Display", monospace;
+}
+
+/* grid layout */
+
 .container {
   display: grid;
-  grid-template-columns: 25px 1fr 1fr 1fr 25px;
+  grid-template-columns: 10px 1fr 1fr 1fr 10px;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   gap: 0px 0px;
   grid-auto-flow: row;
@@ -91,13 +97,15 @@ h6 {
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
   gap: 0px 0px;
-  grid-template-areas: "logo . main-nav";
+  grid-template-areas: "logo logo main-nav";
   grid-area: main-header;
 }
 
 .logo {
   justify-self: start;
+  align-self: center;
   grid-area: logo;
+  padding-top: 0.5rem;
 }
 
 .main-nav {
@@ -162,4 +170,11 @@ h6 {
 .socials {
   justify-self: center;
   grid-area: socials;
+}
+
+/* end of grid layout */
+
+.menu-icon {
+  width: 50px;
+  padding-top: 0.5rem;
 }
