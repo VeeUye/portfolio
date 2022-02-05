@@ -67,3 +67,91 @@ h6 {
 #__next {
   isolation: isolate;
 }
+
+/* my css */
+
+.container {
+  display: grid;
+  grid-template-columns: 25px 1fr 1fr 1fr 25px;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". logo . main-nav ."
+    ". intro intro intro ."
+    ". about about about ."
+    ". projects projects projects ."
+    ". writing writing writing ."
+    ". contact contact contact ."
+    ". footer footer footer .";
+}
+
+.main-nav {
+  justify-self: end;
+  align-self: center;
+  grid-area: main-nav;
+}
+
+.intro {
+  justify-self: center;
+  align-self: center;
+  grid-area: intro;
+}
+
+.about {
+  justify-self: center;
+  grid-area: about;
+}
+
+.projects {
+  justify-self: center;
+  grid-area: projects;
+}
+
+.writing {
+  justify-self: center;
+  grid-area: writing;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: "credits . .";
+  grid-area: footer;
+}
+
+.credits {
+  justify-self: start;
+  grid-area: credits;
+}
+
+.logo {
+  justify-self: start;
+  align-self: center;
+  grid-area: logo;
+}
+
+.contact {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    "contact-form"
+    "socials";
+  grid-area: contact;
+}
+
+.contact-form {
+  justify-self: center;
+  grid-area: contact-form;
+}
+
+.socials {
+  justify-self: center;
+  grid-area: socials;
+}
