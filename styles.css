@@ -70,6 +70,10 @@ h6 {
 
 /* my css */
 
+body {
+  background-color: #fdfffc;
+}
+
 h1 {
   font-family: "Major Mono Display", monospace;
 }
@@ -79,7 +83,7 @@ h1 {
 .container {
   display: grid;
   grid-template-columns: 10px 1fr 1fr 1fr 10px;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 10vh 1fr 1fr 1fr 1fr 1fr 1fr;
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
@@ -177,4 +181,10 @@ h1 {
 .menu-icon {
   width: 50px;
   padding-top: 0.5rem;
+}
+
+.rounded-image {
+  border-radius: 50%;
+  height: 30vh;
+  opacity: 0.9;
 }
