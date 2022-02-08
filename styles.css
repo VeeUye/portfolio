@@ -113,6 +113,12 @@ h1 {
   align-self: center;
   grid-area: logo;
   padding-top: 0.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "text-logo text-logo"
+    "tag-line tag-line";
 }
 
 .main-nav {
@@ -124,7 +130,6 @@ h1 {
 .intro {
   justify-self: center;
   grid-area: intro;
-  position: relative;
 }
 
 .about {
@@ -179,11 +184,25 @@ h1 {
   grid-area: socials;
 }
 
+.about h2 {
+  display: flex;
+  justify-content: center;
+}
+
+.text-logo {
+  justify-self: start;
+  grid-area: text-logo;
+}
+
+.tag-line {
+  justify-self: center;
+  grid-area: tag-line;
+  font-size: 0.75rem;
+  padding-top: 0.2rem;
+}
+
 /* end of grid layout */
 
-.logo {
-  height: 6vh;
-}
 .menu-icon {
   width: 50px;
   padding-top: 0.5rem;
