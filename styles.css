@@ -184,10 +184,24 @@ h1 {
   grid-area: socials;
 }
 
+/* can only get h2 centered like this */
+
 .about h2 {
   display: flex;
   justify-content: center;
 }
+
+.projects h2 {
+  display: flex;
+  justify-content: center;
+}
+
+.writing h2 {
+  display: flex;
+  justify-content: center;
+}
+
+/* end h2 section */
 
 .text-logo {
   justify-self: start;
