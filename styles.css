@@ -86,7 +86,6 @@ h1 {
   display: grid;
   position: absolute;
   grid-template-columns: 10px 1fr 1fr 1fr 10px;
-  grid-template-rows: min-content auto min-content;
   gap: 20px 0px;
   grid-auto-flow: row;
   grid-template-areas:
