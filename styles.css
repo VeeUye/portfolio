@@ -85,11 +85,11 @@ h1 {
 .container {
   display: grid;
   position: absolute;
-  grid-template-columns: 10px 1fr 1fr 1fr 10px;
+  grid-template-columns: 5% 1fr 1fr 1fr 5%;
   gap: 20px 0px;
   grid-auto-flow: row;
   grid-template-areas:
-    ". main-header main-header main-header ."
+    "main-header main-header main-header main-header main-header"
     ". intro intro intro ."
     ". about about about ."
     ". projects projects projects ."
@@ -99,12 +99,17 @@ h1 {
 }
 
 .main-header {
+  background-color: #fdfffc;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
   gap: 0px 0px;
   grid-template-areas: "logo logo main-nav";
   grid-area: main-header;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+  z-index: 1;
 }
 
 .logo {
@@ -112,6 +117,7 @@ h1 {
   align-self: center;
   grid-area: logo;
   padding-top: 0.5rem;
+  padding-left: 0.5rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
@@ -219,6 +225,7 @@ h1 {
 .menu-icon {
   width: 50px;
   padding-top: 0.5rem;
+  padding-right: 0.3rem;
 }
 
 #profile-img.rounded-image {
@@ -236,7 +243,7 @@ h1 {
   height: 0%;
   width: 100%;
   position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  z-index: 5; /* Sit on top */
   left: 0;
   top: 0;
   background-color: rgb(0, 0, 0); /* Black fallback color */
@@ -275,6 +282,7 @@ h1 {
 .closebtn {
   max-width: 65px;
   padding-top: 0.5rem;
+  padding-right: 0;
 }
 
 /* Position the close button (top right corner) */
