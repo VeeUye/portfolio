@@ -19,10 +19,10 @@
       <a href="#" class="closebtn" onclick="closeNav()"
         ><img src="./images/icons/menu-up-light.svg" alt="Close nav bar button"></a
       > <div class="overlay-content">
-    <a href="#about">About</a>
-    <a href="#">Projects</a>
-    <a href="#">Writing</a>
-    <a href="#">Contact</a>
+    <a href="#about" onclick="closeNav()" >About</a>
+    <a href="#projects" onclick="closeNav()">Projects</a>
+    <a href="#writing" onclick="closeNav()">Writing</a>
+    <a href="#contact" onclick="closeNav()">Contact</a>
   </div>
 
 </div>
@@ -64,7 +64,7 @@
       </div>
         
       </div>
-      <div class="projects"><h2>Projects</h2>
+      <div id="projects" class="projects"><h2>Projects</h2>
       <div class="carousel">
         <input type="radio" name="position" checked />
   <input type="radio" name="position" />
@@ -78,8 +78,8 @@
     <div class="item">Placeholder Project 4</div>
     <div class="item">Placeholder Project 5</div>
     </div></div>
-      <div class="writing"><h2>Writing</h2></div>
-      <div class="contact">
+      <div id="writing" class="writing"><h2>Writing</h2></div>
+      <div id="contact" class="contact">
         <div class="contact-form">
           <h2>Contact</h2>
           <br />
