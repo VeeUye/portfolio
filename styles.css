@@ -210,6 +210,7 @@ h1 {
   background-color: rgb(0, 0, 0); /* Black fallback color */
   background-color: rgba(0, 0, 0, 0.9); /* Black w/opacity */
   overflow-x: hidden; /* Disable horizontal scroll */
+  overflow-y: hidden; /* Disable vertical scroll */
   transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
 }
 
@@ -238,12 +239,17 @@ h1 {
   color: #1780a1;
 }
 
+/* Attempting to resize icon */
+.closebtn {
+  max-width: 65px;
+  padding-top: 0.5rem;
+}
+
 /* Position the close button (top right corner) */
 .overlay .closebtn {
   position: absolute;
-  top: 20px;
-  right: 45px;
-  font-size: 60px;
+  top: 0.5rem;
+  right: 5px;
 }
 
 /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
@@ -254,7 +260,7 @@ h1 {
   .overlay .closebtn {
     font-size: 40px;
     top: 15px;
-    right: 35px;
+    right: 53px;
   }
 }
 
