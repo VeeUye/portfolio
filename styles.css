@@ -79,13 +79,21 @@ body {
 h1,
 h2 {
   font-family: "Major Mono Display", monospace;
+  font-size: 2rem;
 }
 
 p {
   text-align: justify;
-  padding-top: 1rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+a {
+  text-decoration: none;
 }
 
+a:visited {
+  color: #5c4d7d;
+}
 /* grid layout */
 
 .container {
@@ -142,6 +150,7 @@ p {
 .intro {
   justify-self: center;
   grid-area: intro;
+  margin-bottom: 2rem;
 }
 
 .about {
