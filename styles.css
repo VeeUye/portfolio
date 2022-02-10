@@ -76,7 +76,8 @@ body {
   color: #1780a1;
 }
 
-h1 {
+h1,
+h2 {
   font-family: "Major Mono Display", monospace;
 }
 
@@ -189,24 +190,10 @@ h1 {
   grid-area: socials;
 }
 
-/* can only get h2 centered like this */
-
-.about h2 {
+.main-h2 {
   display: flex;
   justify-content: center;
 }
-
-.projects h2 {
-  display: flex;
-  justify-content: center;
-}
-
-.writing h2 {
-  display: flex;
-  justify-content: center;
-}
-
-/* end h2 section */
 
 .text-logo {
   justify-self: start;
@@ -231,7 +218,7 @@ h1 {
 #profile-img.rounded-image {
   border-radius: 50%;
   height: 30vh;
-  opacity: 0.8;
+  opacity: 0.75;
   margin-top: 1vh;
 }
 
@@ -246,8 +233,16 @@ h1 {
   z-index: 5; /* Sit on top */
   left: 0;
   top: 0;
-  background-color: rgb(0, 0, 0); /* Black fallback color */
-  background-color: rgba(0, 0, 0, 0.9); /* Black w/opacity */
+  background: rgba(23, 128, 161, 0.77);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5.7px);
+  -webkit-backdrop-filter: blur(5.7px);
+  border: 1px solid rgba(23, 128, 161, 0.23);
+  /* +++++++++++++++++++
+  background-color: rgb(0, 0, 0); Black fallback color
+  background-color: rgba(0, 0, 0, 0.9); Black w/opacity
++++++++++++++++++++++++ */
   overflow-x: hidden; /* Disable horizontal scroll */
   overflow-y: hidden; /* Disable vertical scroll */
   transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
@@ -266,6 +261,7 @@ h1 {
 .overlay a {
   padding: 8px;
   text-decoration: none;
+  font-family: "Major Mono Display", monospace;
   font-size: 36px;
   color: #fdfffc;
   display: block; /* Display block instead of inline */
@@ -280,7 +276,7 @@ h1 {
 
 /* Attempting to resize icon */
 .closebtn {
-  max-width: 65px;
+  max-width: 60px;
   padding-top: 0.5rem;
   padding-right: 0;
 }
@@ -316,6 +312,7 @@ h1 {
 }
 
 main#carousel {
+  /* need to alter these units as below */
   grid-row: 1 / 2;
   grid-column: 1 / 8;
   width: 100vw;
@@ -334,14 +331,13 @@ main#carousel {
 
 div.item {
   position: absolute;
-  width: 300px;
-  height: 400px;
+  width: 75vw;
+  height: 50vh;
   background-color: coral;
   --r: calc(var(--position) - var(--offset));
   --abs: max(calc(var(--r) * -1), var(--r));
   transition: all 0.25s linear;
-  transform: rotateY(calc(-10deg * var(--r)))
-    translateX(calc(-300px * var(--r)));
+  transform: rotateY(calc(-10deg * var(--r))) translateX(calc(-75vw * var(--r)));
   z-index: calc((var(--position) - var(--abs)));
 }
 
@@ -349,6 +345,7 @@ div.item:nth-of-type(1) {
   --offset: 1;
   background-color: #90f1ef;
   color: #fdfffc;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -357,6 +354,7 @@ div.item:nth-of-type(2) {
   --offset: 2;
   background-color: #ff70a6;
   color: #fdfffc;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -365,6 +363,7 @@ div.item:nth-of-type(3) {
   --offset: 3;
   background-color: #ff9770;
   color: #fdfffc;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -373,6 +372,7 @@ div.item:nth-of-type(4) {
   --offset: 4;
   background-color: #ffd670;
   color: #fdfffc;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -381,6 +381,7 @@ div.item:nth-of-type(5) {
   --offset: 5;
   background-color: #e9ff70;
   color: #fdfffc;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -424,6 +425,14 @@ input:nth-of-type(5) {
 }
 input:nth-of-type(5):checked ~ main#carousel {
   --position: 5;
+}
+
+/* ------------- for writing ------------ */
+.writing-post {
+  /* display: inline-block; */
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  padding: 10px;
+  margin: 1rem;
 }
 
 /* From https://css.glass */

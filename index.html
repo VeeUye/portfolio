@@ -19,15 +19,16 @@
       <a href="#" class="closebtn" onclick="closeNav()"
         ><img src="./images/icons/menu-up-light.svg" alt="Close nav bar button"></a
       > <div class="overlay-content">
+         <a href="#home" onclick="closeNav()" >home</a>
     <a href="#about" onclick="closeNav()" >About</a>
-    <a href="#projects" onclick="closeNav()">Projects</a>
+    <a href="#projects" onclick="closeNav()">projects</a>
     <a href="#writing" onclick="closeNav()">Writing</a>
-    <a href="#contact" onclick="closeNav()">Contact</a>
+    <a href="#contact" onclick="closeNav()">contact</a>
   </div>
 
 </div>
     </div>
-    <div class="container">
+    <div id="home" class="container">
       <header class="main-header">
         <div class="logo"><div class="text-logo"><img src="./images/icons/logo-bold.svg" alt="Vee Uye text logo" /></div>
          <div class="tag-line">Junior Software Developer</div> 
@@ -42,7 +43,7 @@
       </header>
 
       <div class="intro">
-        <img
+        <img 
           class="rounded-image"
           id="profile-img"
           src="./images/figma profile pic.jpeg"
@@ -51,7 +52,7 @@
       </div>
 
       <div id="about" class="about">
-        <div><h2>About</h2>
+        <div><h2 class="main-h2">About</h2>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
           quaerat repellendus repudiandae, soluta minus molestiae illo animi
@@ -64,7 +65,7 @@
       </div>
         
       </div>
-      <div id="projects" class="projects"><h2>Projects</h2>
+      <div id="projects" class="projects"><h2 class="main-h2">projects</h2>
       <div class="carousel">
         <input type="radio" name="position" checked />
   <input type="radio" name="position" />
@@ -78,16 +79,22 @@
     <div class="item">Placeholder Project 4</div>
     <div class="item">Placeholder Project 5</div>
     </div></div>
-      <div id="writing" class="writing"><h2>Writing</h2></div>
+      <div id ="writing" class="writing"><h2 class="main-h2" >Writing
+      </h2>
+      <div class="writing-post">dummy headline of dummy post 1</div>
+      <div class="writing-post">dummy headline of dummy post 2</div>
+      <div class="writing-post">dummy headline of dummy post 3</div>
+    </div>
       <div id="contact" class="contact">
         <div class="contact-form">
-          <h2>Contact</h2>
+          <h2 class="main-h2">contact</h2>
           <br />
           <br />
           <p>contact form</p>
         </div>
 
         <div class="socials"><p>socials</p></div>
+        GH LI TW 
       </div>
       <div class="footer">
         <div class="credits"><p>Created by Vee Uye 2022</p></div>
