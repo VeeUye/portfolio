@@ -502,7 +502,8 @@ textarea {
   .container {
     grid-template-areas:
       "main-header main-header main-header main-header main-header"
-      ". intro intro about about ."
+      ". intro intro about ."
+      ". . . . ."
       ". projects projects projects ."
       ". writing writing writing ."
       ". contact contact contact ."
