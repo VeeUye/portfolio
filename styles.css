@@ -81,14 +81,20 @@ h2 {
   font-family: "Major Mono Display", monospace;
 }
 
+p {
+  text-align: justify;
+  padding-top: 1rem;
+}
+
 /* grid layout */
 
 .container {
   display: grid;
   position: absolute;
   grid-template-columns: 5% 1fr 1fr 1fr 5%;
+  /* grid-auto-rows: auto auto 1fr 1fr 1fr auto auto; */
   gap: 20px 0px;
-  /* grid-auto-flow: row; */
+  grid-auto-flow: row;
   grid-template-areas:
     "main-header main-header main-header main-header main-header"
     ". intro intro intro ."
@@ -171,7 +177,7 @@ h2 {
 .contact {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr;
+  /* grid-template-rows: 1fr 1fr; */
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
@@ -420,6 +426,7 @@ input:nth-of-type(5):checked ~ main#carousel {
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   padding: 10px;
   margin: 1rem;
+  aspect-ratio: 1 / 1;
 }
 
 /* ------------ contact form ----------- */
