@@ -1,4 +1,4 @@
-/*
+/* 
   1. Use a more-intuitive box-sizing model.
 */
 *,
@@ -67,13 +67,12 @@ h6 {
 #__next {
   isolation: isolate;
 }
-
 /* my css */
 
 body {
-  background-color: #fdfffc;
+  background-color: #fefae0;
   font-family: "Merriweather", serif;
-  color: #1780a1;
+  color: black;
 }
 
 h1,
@@ -94,14 +93,14 @@ a {
 a:visited {
   color: #5c4d7d;
 }
-/* grid layout */
+/* old grid layout */
 
-.container {
+/* .container {
   display: grid;
   position: absolute;
   grid-template-columns: 5% 1fr 1fr 1fr 5%;
   /* grid-auto-rows: auto auto 1fr 1fr 1fr auto auto; */
-  gap: 20px 0px;
+/* gap: 20px 0px;
   grid-auto-flow: row;
   grid-template-areas:
     "main-header main-header main-header main-header main-header"
@@ -111,9 +110,9 @@ a:visited {
     ". writing writing writing ."
     ". contact contact contact ."
     ". footer footer footer .";
-}
+} */
 
-.main-header {
+/* .main-header {
   background-color: #fdfffc;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -122,12 +121,12 @@ a:visited {
   grid-template-areas: "logo logo main-nav";
   grid-area: main-header;
   position: -webkit-sticky; /* Safari */
-  position: sticky;
+/* position: sticky;
   top: 0;
   z-index: 1;
-}
+} */
 
-.logo {
+/* .logo {
   justify-self: start;
   align-self: center;
   grid-area: logo;
@@ -145,9 +144,9 @@ a:visited {
   justify-self: end;
   align-self: start;
   grid-area: main-nav;
-}
+} */
 
-.intro {
+/* .intro {
   justify-self: center;
   grid-area: intro;
   margin-bottom: 2rem;
@@ -166,9 +165,9 @@ a:visited {
 .writing {
   justify-self: center;
   grid-area: writing;
-}
+} */
 
-.footer {
+/* .footer {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
@@ -181,13 +180,13 @@ a:visited {
 .credits {
   justify-self: start;
   grid-area: credits;
-}
+} */
 
-.contact {
+/* .contact {
   display: grid;
-  grid-template-columns: 1fr;
-  /* grid-template-rows: 1fr 1fr; */
-  gap: 0px 0px;
+  grid-template-columns: 1fr; */
+/* grid-template-rows: 1fr 1fr; */
+/* gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
     "contact-form"
@@ -208,9 +207,9 @@ a:visited {
 .main-h2 {
   display: flex;
   justify-content: center;
-}
+} */
 
-.text-logo {
+/* .text-logo {
   justify-self: start;
   grid-area: text-logo;
 }
@@ -220,20 +219,86 @@ a:visited {
   grid-area: tag-line;
   font-size: 0.75rem;
   padding-top: 0.2rem;
+} */
+
+/* end of old grid layout */
+
+/* new layout */
+
+.container {
+  display: grid;
+  grid-template-columns: 0.3fr 2.4fr 0.3fr;
+  grid-template-rows: 0.3fr 2.4fr 0.3fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". nav ."
+    ". splash ."
+    ". footer .";
 }
 
-/* end of grid layout */
+.nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas:
+    ". ."
+    "logo nav-links";
+  grid-area: nav;
+}
+
+.nav-links {
+  justify-self: end;
+  align-self: end;
+  grid-area: nav-links;
+}
+
+.logo {
+  justify-self: start;
+  align-self: end;
+  grid-area: logo;
+}
+
+.splash {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-auto-flow: row;
+  grid-template-areas: ". title";
+  grid-area: splash;
+}
+
+.title {
+  grid-area: title;
+}
+
+.footer {
+  grid-area: footer;
+}
+
+/* end of new layout */
 
 .menu-icon {
-  width: 50px;
-  padding-top: 0.5rem;
+  width: 4rem;
+  /* padding-top: 0.5rem; */
   padding-right: 0.3rem;
+}
+
+#text-logo {
+  width: 50rem;
+}
+
+#splash-text {
+  font-size: 3rem;
 }
 
 #profile-img.rounded-image {
   border-radius: 50%;
   height: 30vh;
-  opacity: 0.75;
+  opacity: 0.85;
   margin-top: 1vh;
 }
 
@@ -498,7 +563,7 @@ textarea {
 
 /* ------------------ rearranging grid layout --------- */
 
-@media screen and (min-width: 700px) {
+/* @media screen and (min-width: 700px) {
   .container {
     grid-template-areas:
       "main-header main-header main-header main-header main-header"
@@ -509,7 +574,7 @@ textarea {
       ". contact contact contact ."
       ". footer footer footer .";
   }
-}
+} */
 
 /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
 @media screen and (max-height: 450px) {
