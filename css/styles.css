@@ -97,15 +97,15 @@ a:visited {
 .container {
   background-color: #000505;
   display: grid;
-  grid-template-columns: 0.3fr 2.4fr 0.3fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 0.3fr 0.5fr 1fr 0.3fr;
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
-    ". nav ."
-    ". title-mobile ."
-    ". splash ."
-    ". footer .";
+    ". nav . . . . . . . . . ."
+    ". . title-mobile title-mobile title-mobile title-mobile title-mobile title-mobile title-mobile title-mobile . ."
+    ". splash splash splash splash splash splash splash splash splash splash ."
+    ". footer . . . . . . . . . .";
 }
 
 .nav {
@@ -145,7 +145,8 @@ a:visited {
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas: ". .";
-  justify-self: stretch;
+  /* justify-self: stretch; */
+
   /* align-self: center; */
   grid-area: splash;
 }
@@ -177,11 +178,12 @@ a:visited {
   }
 
   .splash {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: minmax(100vh, 1000px);
     gap: 0px 0px;
-    grid-auto-flow: row;
-    grid-template-areas: ". title-desktop";
+    justify-content: end;
+    /* grid-auto-flow: row; */
+    grid-template-areas: ". . . . . . . . . title-desktop . .";
   }
 
   .title-mobile {
@@ -191,6 +193,6 @@ a:visited {
   .title-desktop {
     display: grid;
     align-self: center;
-    justify-self: right;
+    justify-content: end;
   }
 }
