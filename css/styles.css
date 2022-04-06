@@ -262,12 +262,17 @@ a:visited {
 }
 
 .splash {
+  background-image: url("/images/profile-images/profile-image-big.png");
+  background-repeat: no-repeat;
+  background-size: cover;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr;
+  grid-template-rows: minmax(100vh, 1000px);
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas: ". title";
+  justify-self: stretch;
+  /* align-self: center; */
   grid-area: splash;
 }
 
