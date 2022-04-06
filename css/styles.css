@@ -167,7 +167,7 @@ a:visited {
 /* end of new layout */
 
 /* mobile first in mind */
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 1200px) {
   #big-title {
     font-size: 10em;
     margin: 0;
@@ -182,13 +182,15 @@ a:visited {
     grid-template-columns: 0.3fr 2.4fr 0.3fr;
     grid-template-rows: 0.3fr 1fr 0.3fr;
     grid-template-areas:
-      ". nav ."
-      ". splash ."
-      ". footer .";
+      ". nav . . . . . . . . . ."
+      "splash splash splash splash splash splash splash splash splash splash splash ."
+      ". footer . . . . . . . . . .";
   }
 
   .splash {
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns:
+      1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr minmax(auto, 30vw)
+      1fr;
     grid-template-rows: minmax(100vh, 1000px);
     gap: 0px 0px;
     justify-content: end;
