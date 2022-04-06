@@ -104,7 +104,7 @@ a:visited {
   grid-template-areas:
     ". nav . . . . . . . . . ."
     ". . title-mobile title-mobile title-mobile title-mobile title-mobile title-mobile title-mobile title-mobile . ."
-    ". splash splash splash splash splash splash splash splash splash splash ."
+    "splash splash splash splash splash splash splash splash splash splash splash ."
     ". footer . . . . . . . . . .";
 }
 
@@ -168,6 +168,16 @@ a:visited {
 
 /* mobile first in mind */
 @media only screen and (min-width: 992px) {
+  #big-title {
+    font-size: 10em;
+    margin: 0;
+    line-height: 1em;
+    margin-top: 1em;
+  }
+
+  #big-subhead {
+    font-size: 3em;
+  }
   .container {
     grid-template-columns: 0.3fr 2.4fr 0.3fr;
     grid-template-rows: 0.3fr 1fr 0.3fr;
@@ -183,7 +193,7 @@ a:visited {
     gap: 0px 0px;
     justify-content: end;
     /* grid-auto-flow: row; */
-    grid-template-areas: ". . . . . . . . . title-desktop . .";
+    grid-template-areas: ". . . . . . . . . . title-desktop .";
   }
 
   .title-mobile {
