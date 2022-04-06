@@ -226,13 +226,15 @@ a:visited {
 /* new layout */
 
 .container {
+  background-color: #000505;
   display: grid;
   grid-template-columns: 0.3fr 2.4fr 0.3fr;
-  grid-template-rows: 0.3fr 2.4fr 0.3fr;
+  grid-template-rows: 0.3fr 0.5fr 1fr 0.3fr;
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
     ". nav ."
+    ". title ."
     ". splash ."
     ". footer .";
 }
@@ -266,11 +268,14 @@ a:visited {
   background-repeat: no-repeat;
   background-size: cover;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: minmax(100vh, 1000px);
+  grid-template-columns: 1fr;
+  grid-template-rows: 50vh;
+  /* grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr; */
+  /* grid-template-rows: minmax(100vh, 1000px); */
   gap: 0px 0px;
   grid-auto-flow: row;
-  grid-template-areas: ". title";
+  /* grid-template-areas: ". ."; */
   justify-self: stretch;
   /* align-self: center; */
   grid-area: splash;
@@ -582,7 +587,7 @@ textarea {
 } */
 
 /* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
-@media screen and (max-height: 450px) {
+/* @media screen and (max-height: 450px) {
   .overlay a {
     font-size: 20px;
   }
@@ -591,20 +596,24 @@ textarea {
     top: 1px;
     right: 53px;
   }
-}
-
-/* From https://css.glass */
-
-/* #nav-overlay {
-  height: 100%;
-  width: 100%;
-  position: fixed;
-  visibility: visible;
-  z-index: 100;
-  background: rgba(23, 128, 161, 0.47);
-  border-radius: 16px;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5.7px);
-  -webkit-backdrop-filter: blur(5.7px);
-  border: 1px solid rgba(23, 128, 161, 0.23);
 } */
+
+/* mobile first in mind */
+@media only screen and (min-width: 992px) {
+  .container {
+    grid-template-columns: 0.3fr 2.4fr 0.3fr;
+    grid-template-rows: 0.3fr 0.5fr 1fr 0.3fr;
+    grid-template-areas:
+      ". nav ."
+      ". splash ."
+      ". footer .";
+  }
+
+  .splash {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: minmax(100vh, 1000px);
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas: ". title";
+  }
+}
