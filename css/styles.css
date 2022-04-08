@@ -78,9 +78,15 @@ body {
 h1,
 h2 {
   font-family: "Major Mono Display", monospace;
-  font-size: 2rem;
 }
 
+#small-title {
+  font-size: 3rem;
+}
+
+#small-subhead {
+  font-size: 1em;
+}
 p {
   text-align: justify;
   padding-top: 2rem;
@@ -98,7 +104,7 @@ a:visited {
   background-color: #000505;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 5vh 35vh 50vh 10vh;
+  grid-template-rows: 5vh 18vh 50vh 10vh;
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas:
@@ -163,18 +169,6 @@ a:visited {
 
 /* mobile first in mind */
 @media only screen and (min-width: 735px) {
-  /* #big-title {
-    font-size: 5em;
-    margin: 0;
-    line-height: 1em;
-    margin-top: 1em;
-    margin-bottom: 0.25em;
-  }
-
-  #big-subhead {
-    font-size: 2em;
-  } */
-
   #big-title {
     font-size: 6em;
     margin: 0;
@@ -218,26 +212,6 @@ a:visited {
     align-self: center;
     justify-content: end;
   }
-}
-
-@media only screen and (min-width: 900px) {
-  /* #big-title {
-    font-size: 6em;
-    margin: 0;
-    line-height: 1em;
-    margin-top: 1em;
-  }
-
-  #big-subhead {
-    font-size: 1.65em;
-    margin-top: 0.5em;
-  } */
-  /* .splash {
-    grid-template-columns:
-      1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr minmax(auto, 20vw) minmax(auto, 20vw) 1fr
-      1fr;
-    grid-template-areas: ". . . . . . . . title-desktop title-desktop . .";
-  } */
 }
 
 @media only screen and (min-width: 1200px) {
